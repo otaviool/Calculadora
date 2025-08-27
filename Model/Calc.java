@@ -31,7 +31,7 @@ public class Calc {
         return result;
     }
 
-    public double divide(double val1, double val2) {
+    public double Todivide(double val1, double val2) {
         if (val2 == 0) {
             System.out.println("Não é possível dividir por zero.");
             return Double.NaN; // Retorna um valor "Not a Number" para um resultado inválido

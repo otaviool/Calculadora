@@ -5,7 +5,7 @@ public class Main {
 
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
-    Calc calculator = new Calc();
+    Calc calc = new Calc();
     boolean continueCalculating = true;
 
     while (continueCalculating) {
@@ -30,7 +30,7 @@ public class Main {
                 val1 = scanner.nextDouble();
                 System.out.print("Digite o segundo valor: ");
                 val2 = scanner.nextDouble();
-                result = calculator.add(val1, val2);
+                result = calc.add(val1, val2);
                 System.out.println("Resultado: " + result);
                 break;
             case 2:
@@ -38,7 +38,7 @@ public class Main {
                 val1 = scanner.nextDouble();
                 System.out.print("Digite o segundo valor: ");
                 val2 = scanner.nextDouble();
-                result = calculator.subtract(val1, val2);
+                result = calc.subtract(val1, val2);
                 System.out.println("Resultado: " + result);
                 break;
             case 3:
@@ -46,7 +46,7 @@ public class Main {
                 val1 = scanner.nextDouble();
                 System.out.print("Digite o segundo valor: ");
                 val2 = scanner.nextDouble();
-                result = calculator.divide(val1, val2);
+                result = calc.divide(val1, val2);
                 if (!Double.isNaN(result)) {
                     System.out.println("Resultado: " + result);
                 }
@@ -56,7 +56,7 @@ public class Main {
                 val1 = scanner.nextDouble();
                 System.out.print("Digite o segundo valor: ");
                 val2 = scanner.nextDouble();
-                result = calculator.multiply(val1, val2);
+                result = calc.multiply(val1, val2);
                 System.out.println("Resultado: " + result);
                 break;
             case 5:
@@ -64,7 +64,7 @@ public class Main {
                 val1 = scanner.nextDouble();
                 System.out.print("Digite o segundo valor: ");
                 val2 = scanner.nextDouble();
-                result = calculator.modulus(val1, val2);
+                result = calc.modulus(val1, val2);
                 if (!Double.isNaN(result)) {
                     System.out.println("Resultado: " + result);
                 }
@@ -72,7 +72,7 @@ public class Main {
             case 6:
                 System.out.print("Digite um valor inteiro não negativo: ");
                 val1 = scanner.nextDouble();
-                long factorialResult = calculator.factorial(val1);
+                long factorialResult = calc.factorial(val1);
                 if (factorialResult != -1) {
                     System.out.println("Resultado: " + factorialResult);
                 }
@@ -80,13 +80,13 @@ public class Main {
             case 7:
                 System.out.print("Digite um número inteiro: ");
                 int numBinario = scanner.nextInt();
-                String binaryResult = calculator.decimalTobinary(numBinario);
+                String binaryResult = calc.decimalTobinary(numBinario);
                 System.out.println("Resultado: " + binaryResult);
                 break;
             case 8:
                 System.out.print("Digite um número: ");
                 int numHex = scanner.nextInt();
-                String hexResult = calculator.decimalTohex(numHex);
+                String hexResult = calc.decimalTohex(numHex);
                 System.out.println("Resultado: " + hexResult);
                 break;
             default:
@@ -101,7 +101,7 @@ public class Main {
         }
     }
 
-    calculator.showLastOperations();
+    calc.showLastOperations();
     scanner.close();
 }
 }
